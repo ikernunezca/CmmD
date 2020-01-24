@@ -14,7 +14,7 @@ https://github.com/gilles-didier/MolTi-DREAM
       BiocManager::install('AnnotationDbi')
 
 ### 4. Install CmmD package using devtools:
-      devtools::install_github("ikernunezca/CmmD)
+      devtools::install_github('ikernunezca/CmmD')
 
 #### References: 
 Didier, G., Valdeolivas, A., Baudot, A., 2018. Identifying communities from multiplex biological networks by randomized optimization of modularity. F1000Res 7. https://doi.org/10.12688/f1000research.15486.2
