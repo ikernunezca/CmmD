@@ -19,4 +19,4 @@ https://github.com/gilles-didier/MolTi-DREAM
 #### References: 
 Didier, G., Valdeolivas, A., Baudot, A., 2018. Identifying communities from multiplex biological networks by randomized optimization of modularity. F1000Res 7. https://doi.org/10.12688/f1000research.15486.2
 
-#### Contact: Iker Nuñez-Carpintero <iker.nunez@bsc.es>
+#### Contact: Iker Nuñez-Carpintero, Barcelona Supercomputing Center <iker.nunez@bsc.es>
