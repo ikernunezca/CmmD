@@ -1,0 +1,14 @@
+Package: CmmD
+Type: Package
+Title: Interface for running CmmD analysis on network community
+        structures.
+Version: 0.1.0
+Author: Iker Nuñez-Carpintero <iker.nunez@bsc.es>
+Description: Pass network files to MolTi network community detection algorithm and runs the CmmD analysis for MolTi's output. It can perform the CmmD analysis with precomputed community structure files with MolTi's format.
+SystemRequirements: molti-console
+Imports: AnnotationDbi, igraph, stringr, e1071
+Suggests: org.Hs.eg.db
+License: GPL (>=2)
+Encoding: UTF-8
+Packaged: 2020-01-24 15:22:35 UTC; inunez
+NeedsCompilation: no
