@@ -16,4 +16,4 @@ https://github.com/gilles-didier/MolTi-DREAM
 ### 4. Install CmmD package using devtools:
       devtools::install_github("ikernunezca/CmmD)
 
-### Author and Mantainer: Iker Nuñez-Carpintero <iker.nunez@bsc.es>
+#### Contact: Iker Nuñez-Carpintero <iker.nunez@bsc.es>
