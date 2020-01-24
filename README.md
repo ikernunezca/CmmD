@@ -1,5 +1,5 @@
 # CmmD: Constant Multiplex network Module Detector
-CmmD is an tool for R that runs the MolTi community detection algorithm (Didier et al. 2018) and computes the "CmmD" analysis for the network community structures obtained. This "CmmD" analysis just looks for all the nodes of the multiplex network that are consistently found in the same community while changing MolTi's reslution parameter, a value that can be set in order to tune the number of communities found when running the algortihm.
+CmmD is a R tool that runs MolTi community detection algorithm (Didier et al. 2018) and computes the "CmmD" analysis for the network community structures obtained. This "CmmD" analysis looks for all the nodes of the multiplex network that are consistently found in the same community while changing MolTi's reslution parameter, a value that can be set in order to tune the number of communities found when running the algortihm.
 
 ## How to Install CmmD
 
@@ -15,5 +15,8 @@ https://github.com/gilles-didier/MolTi-DREAM
 
 ### 4. Install CmmD package using devtools:
       devtools::install_github("ikernunezca/CmmD)
+
+#### References: 
+Didier, G., Valdeolivas, A., Baudot, A., 2018. Identifying communities from multiplex biological networks by randomized optimization of modularity. F1000Res 7. https://doi.org/10.12688/f1000research.15486.2
 
 #### Contact: Iker Nuñez-Carpintero <iker.nunez@bsc.es>
