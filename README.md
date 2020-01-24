@@ -9,7 +9,7 @@ https://github.com/gilles-didier/MolTi-DREAM
 ### 2. Install package "devtools" in R:
       install.packages('devtools')
  
-### 3.Install package "AnnotationDbi" using Bioconductor:
+### 3. Install package "AnnotationDbi" using Bioconductor:
       install.packages('BiocManager') #Only if Bioconductor is not installed in your system
       BiocManager::install('AnnotationDbi')
 
