@@ -42,6 +42,7 @@ Example 2: Now, suppose that we want to perform the very same analysis, but we h
       nodes_to_analyze <- c("A","B","C","D")
       CmmD_from_community_structures(nodelist=nodes_to_analyze, community_structures=structures,resolution_start=0,resolution_end=4, interval=0.5)
 
+You will find more information in how to use the functions and the output returned from them in the documentation of the functions.
 
 #### References: 
 Didier, G., Valdeolivas, A., Baudot, A., 2018. Identifying communities from multiplex biological networks by randomized optimization of modularity. F1000Res 7. https://doi.org/10.12688/f1000research.15486.2
