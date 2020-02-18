@@ -55,7 +55,7 @@ CmmD_from_community_structures <- function(nodelist= NULL, community_structures,
 
   if(length(nodelist)>0){
     inter_nodes <- intersect(allgenes,nodelist)
-    allgenes <- nodelist
+    allgenes <- inter_nodes
   }
 
   print(paste0("Files red. Calculating Gene/Community matrix"))
