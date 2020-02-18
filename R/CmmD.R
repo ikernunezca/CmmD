@@ -78,7 +78,8 @@ CmmD <- function(nodelist= NULL,input_layers,resolution_start, resolution_end, i
   allgenes <- unique(unlist(alllists))
 
   if(length(nodelist)>0){
-    allgenes <- nodelist
+    inter_nodes <- intersect(allgenes,nodelist)
+    allgenes <- inter_nodes
   }
 
   print(paste0("Files red. Calculating Gene/Community matrix"))
