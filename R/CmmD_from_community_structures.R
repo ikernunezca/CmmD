@@ -5,7 +5,7 @@ CmmD_from_community_structures <- function(nodelist= NULL, community_structures,
   require("igraph")
   require("stringr")
   require("e1071")
-
+  
   if(class(resolution_end)!= 'numeric'){
     stop("ERROR: Resolution parameter must be a number")
   }
@@ -15,15 +15,15 @@ CmmD_from_community_structures <- function(nodelist= NULL, community_structures,
   if(class(interval)!= 'numeric'){
     stop("ERROR: Interval value must be a number")
   }
-
-  print(paste0("Resolution parameter starts at: ",resolution_start))
-  print(paste0("Resolution parameter ends at: ",resolution_end))
-  # print(paste0("Looking for communties found in more than: ",needed_analysis," analysis"))
-
+  
+  message(paste0("Resolution parameter starts at: ",resolution_start))
+  message(paste0("Resolution parameter ends at: ",resolution_end))
+  # message(paste0("Looking for communties found in more than: ",needed_analysis," analysis"))
+  
   resolution_interval <- seq(from = resolution_start, to = resolution_end, by = interval)
-
-  print(paste0("Reading MolTi output files. Calculating Gene/Community matrix"))
-
+  
+  message(paste0("Reading MolTi output files. Calculating Gene/Community matrix"))
+  
   output_files <- community_structures
   alllists <- list()
   for(i in 1:length(output_files)){
@@ -52,13 +52,13 @@ CmmD_from_community_structures <- function(nodelist= NULL, community_structures,
   names(alllists) <- output_files
   tamano_alllists <- length(alllists)
   allgenes <- unique(unlist(alllists))
-
+  
   if(length(nodelist)>0){
     inter_nodes <- intersect(allgenes,nodelist)
     allgenes <- inter_nodes
   }
-
-  print(paste0("Files red. Calculating Gene/Community matrix"))
+  
+  message(paste0("Files red. Calculating Gene/Community matrix"))
   res_matrix <- matrix(ncol= tamano_alllists+1, nrow= length(allgenes))
   rownames(res_matrix) <- allgenes
   colnames(res_matrix) <- c(output_files,"Pattern")
@@ -78,12 +78,12 @@ CmmD_from_community_structures <- function(nodelist= NULL, community_structures,
     if((percentage %in% porcentajes)==TRUE){
       cual_percentage <- which(porcentajes==percentage)
       to_post <- paste0("Progress: ",percentage,"%")
-      print(to_post)
+      message(to_post)
     }
   }
-
-  print(paste0("Gene/Community matrix calculated, calculating Hamming distances for all gene pairs. This process may take a while: It takes about 14 min with an Intel Xeon E-2124 processor"))
-
+  
+  message(paste0("Gene/Community matrix calculated, calculating Hamming distances for all gene pairs. This process may take a while: It takes about 14 min with an Intel Xeon E-2124 processor"))
+  
   genes_same_communities <- split(rownames(res_matrix),res_matrix[,"Pattern"])
   final_res_matrix_length <- ncol(res_matrix) - 1
   distance_matrix <- hamming.distance(res_matrix[,1:final_res_matrix_length])
@@ -91,6 +91,6 @@ CmmD_from_community_structures <- function(nodelist= NULL, community_structures,
   names(final_output) <- c("gene_community_matrix","l_constant","hamming_distance_matrix")
   end_time <- Sys.time()
   diff_time <- end_time - start_time
-  print(paste0("Run Time: ",diff_time))
+  message(paste0("Run Time: ",diff_time))
   return(final_output)
 }
