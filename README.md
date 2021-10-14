@@ -8,7 +8,7 @@ When using CmmD, please cite: Núñez-Carpintero, I. et al. (2021) ‘The multil
 ### 1. Download and install molti-console in your system, available at:
 https://github.com/gilles-didier/MolTi-DREAM
 
-* Make sure to add molti-console as an executable program by adding it to your ~/.bashrc file. (This file may change depending on your OS ditribution)
+* Make sure to add molti-console as an executable program from any directory by adding it to your ~/.bashrc file. (This file may change depending on your OS ditribution)
 
 ### 2. Install package "devtools" in R:
       install.packages('devtools')
