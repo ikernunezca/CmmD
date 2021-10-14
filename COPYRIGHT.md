@@ -17,3 +17,6 @@ GNU General Public License (v2.0) (https://www.gnu.org/licenses/old-licenses/gpl
 You should have received a copy of the GNU General Public License (v2.0)
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+
+When using CmmD, please cite: Núñez-Carpintero, I. et al. (2021) ‘The multilayer community structure of medulloblastoma’, iScience, 24(4). doi: 10.1016/j.isci.2021.102365.
