@@ -5,8 +5,8 @@ CmmD <- function(nodelist= NULL,input_layers,resolution_start, resolution_end, i
   require("stringr")
   require("e1071")
   
-  if(length(input_layers)<2){
-    stop("ERROR: Input_layers argument must be a list of at least 2 network files")
+  if(length(input_layers)<1){
+    stop("ERROR: Input_layers argument must be a list of at least 1 network files")
   }
   if(class(resolution_end)!= 'numeric'){
     stop("ERROR: Resolution parameter must be a number")
