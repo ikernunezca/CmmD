@@ -20,7 +20,7 @@ CmmD(nodelist= NULL,input_layers,resolution_start,resolution_end,interval,destfi
   \item{destfile_community_analysis}{String, the path to save Molti's output files.}
 }
 \details{
-For a given interval of resolution parameter values, the function calls MolTi (Didier et al. 2018) to perform community analysis over a multiplex network and compute CmmD analysis for the community structures generated at each resolution parameter value checked.
+For a given interval of resolution parameter values, the function calls MolTi (Didier et al. 2018) to perform multilayer community detection over a multiplex network and compute CmmD multilayer community trajectory analysis (Núñez-Carpintero et al. 2021) for the community structures generated at each resolution parameter value checked.
 }
 \value{
   \item{gene_community_matrix}{A matrix where the rows correspond to the unique nodes of all layers and the colums identify the resolution parameter used in each analysis. The values in the matrix describe the ID of the community where the node is found in each analysis. Each of the columns have its own way of naming the communities found, as a result of the difference in the number of communities found. Therefore, being at community "2" at resolution parameter 2.5 and being at community "2" at resolution parameter 5 does not mean that the node is kept within the same community during the analysis.}
@@ -28,6 +28,7 @@ For a given interval of resolution parameter values, the function calls MolTi (D
   \item{hamming_distance_matrix}{A matrix of dimensions N(nodes) x N(nodes). The hamming distance values between all nodes of the multiplex network. This hamming distance represent the number of analysis where the pair nodes ARE NOT FOUND within the same community.}
 }
 \references{
+Núñez-Carpintero, I., Petrizzelli, M., Zinovyev, A., Cirillo, D. & Valencia, A. 2021. The multilayer community structure of medulloblastoma. iScience 24.
 Didier, G., Valdeolivas, A., Baudot, A., 2018. Identifying communities from multiplex biological networks by randomized optimization of modularity. F1000Res 7. https://doi.org/10.12688/f1000research.15486.2
 }
 \author{
