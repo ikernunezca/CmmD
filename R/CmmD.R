@@ -1,4 +1,4 @@
-CmmD <- function(nodelist= NULL,input_layers,resolution_start, resolution_end, interval, distmethod, threads, destfile_community_analysis){
+CmmD <- function(nodelist= NULL,input_layers,resolution_start, resolution_end, interval, distmethod= "hamming", threads, destfile_community_analysis){
   #libraries needed:
   require("AnnotationDbi")
   require("igraph")
@@ -113,7 +113,7 @@ CmmD <- function(nodelist= NULL,input_layers,resolution_start, resolution_end, i
                                 parDist(x, method = "euclidean", diag = FALSE, upper = FALSE, threads = NULL, ...)
   distance_matrix <- parDist(res_matrix[,1:final_res_matrix_length],method= distmethod ,threads= threads,diag= T)
   final_output <- list(res_matrix[,1:final_res_matrix_length], genes_same_communities,distance_matrix)
-  names(final_output) <- c("gene_community_matrix","l_constant","hamming_distance_matrix")
+  names(final_output) <- c("gene_community_matrix","l_constant","distance_matrix")
   end_time <- Sys.time()
   diff_time <- end_time - start_time
   message(paste0("Run Time: ",diff_time))
