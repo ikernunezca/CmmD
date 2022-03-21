@@ -1,4 +1,4 @@
-CmmD <- function(nodelist= NULL,input_layers,resolution_start, resolution_end, interval, distmethod, destfile_community_analysis){
+CmmD <- function(nodelist= NULL,input_layers,resolution_start, resolution_end, interval, distmethod, threads, destfile_community_analysis){
   #libraries needed:
   require("AnnotationDbi")
   require("igraph")
