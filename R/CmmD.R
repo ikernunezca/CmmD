@@ -20,6 +20,12 @@ CmmD <- function(nodelist= NULL,input_layers,resolution_start, resolution_end, i
   if(class(destfile_community_analysis)!= 'character'){
     stop("ERROR: destfile_community_analysis expects a character string")
   }
+  if(class(distmethod)!= 'character'){
+    stop("ERROR: distmethod expects a character string")
+  }
+  if(class(threads)!= 'numeric'){
+    stop("ERROR: Threads must be a number corresponding to the number of cores available to use")
+  }
   
   ###Prepare inputs to generate the console order for MolTi's run.
   layers <- paste0(input_layers,collapse = " ")
