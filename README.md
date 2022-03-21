@@ -50,6 +50,7 @@ You will find more information in how to use the functions and the output return
 
 #### References: 
 Núñez-Carpintero, I., Petrizzelli, M., Zinovyev, A., Cirillo, D. & Valencia, A. The multilayer community structure of medulloblastoma. iScience 24, (2021). DOI: 10.1016/j.isci.2021.102365
+
 Didier, G., Valdeolivas, A., Baudot, A., 2018. Identifying communities from multiplex biological networks by randomized optimization of modularity. F1000Res 7. https://doi.org/10.12688/f1000research.15486.2
 
 #### Contact: Iker Nuñez-Carpintero, Barcelona Supercomputing Center <iker.nunez@bsc.es>
