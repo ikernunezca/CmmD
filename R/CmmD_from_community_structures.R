@@ -4,7 +4,7 @@ CmmD_from_community_structures <- function(nodelist= NULL, community_structures,
   require("AnnotationDbi")
   require("igraph")
   require("stringr")
-  require("e1071")
+  require("parallelDist")
   
   if(class(resolution_end)!= 'numeric'){
     stop("ERROR: Resolution parameter must be a number")
