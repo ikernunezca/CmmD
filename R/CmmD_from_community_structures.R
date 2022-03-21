@@ -68,7 +68,7 @@ CmmD_from_community_structures <- function(nodelist= NULL, community_structures,
     for(j in 1:tamano_alllists){
       searched <- unlist(lapply(alllists[[j]], function(x) gen %in% x))
       comunidad <- unname(which(searched == TRUE))
-      res_matrix[i,j] <- comunidad
+      res_matrix[i,j] <- as.numeric(comunidad)
     }
     res_matrix[i,"Pattern"] <- paste0(res_matrix[i,1:(ncol(res_matrix)-1)],collapse="_")
     percentage <- round((i/length(allgenes)),digits = 4)*100
