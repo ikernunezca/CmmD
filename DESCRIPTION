@@ -6,7 +6,7 @@ Version: 2.0.0
 Author: Iker Nuñez-Carpintero <iker.nunez@bsc.es>
 Description: Pass network files to MolTi network community detection algorithm and runs the CmmD analysis for MolTi's output. It can perform the CmmD analysis with precomputed community structure files with MolTi's format.
 SystemRequirements: molti-console
-Imports: AnnotationDbi, igraph, stringr, e1071
+Imports: AnnotationDbi, igraph, stringr, parallelDist
 Suggests: org.Hs.eg.db
 License: GPL (>=2)
 Encoding: UTF-8
