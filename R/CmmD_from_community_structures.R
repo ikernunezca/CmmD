@@ -86,7 +86,8 @@ CmmD_from_community_structures <- function(nodelist= NULL, community_structures,
   
   genes_same_communities <- split(rownames(res_matrix),res_matrix[,"Pattern"])
   final_res_matrix_length <- ncol(res_matrix) - 1
-  distance_matrix <- parDist(res_matrix[,1:final_res_matrix_length],method= distmethod ,threads= threads,diag= T)
+  para_dist = as.double(res_matrix[,1:final_res_matrix_length])
+  distance_matrix <- parDist(para_dist,method= distmethod ,threads= threads,diag= T)
   final_output <- list(res_matrix[,1:final_res_matrix_length], genes_same_communities,distance_matrix)
   names(final_output) <- c("gene_community_matrix","l_constant","distance_matrix")
   #end_time <- Sys.time()
