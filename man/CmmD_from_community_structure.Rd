@@ -15,16 +15,19 @@ CmmD_from_community_structures(nodelist=NULL,community_structures,resolution_sta
   \item{resolution_start}{Numeric, a real number determining the first gamma resolution parameter used to generate the different MolTi's outputs}
   \item{resolution_end}{Numeric, a real number determining the last gamma resolution parameter used to generate the different MolTi's outputs}
   \item{interval}{Numeric, a real number determining the interval of the resolution parameter used to generate the different MolTi's outputs}
+  \item{distmethod}{String, A distance method metric to use to compute the trajectories. Defaults to "hamming" for hamming distance, but accepts any other metric supplied by parallelDist package.}
+  \item{threads}{Numeric, the number of threads to use for the computation of the distance matrix.}
 }
 \details{
-Compute CmmD analysis for a set of given community structures generated with MolTi (or have MolTi's format) (Didier et al. 2018).
+Compute CmmD multilayer community trajectory analysis for a set of given community structures generated with MolTi (or have MolTi's format) (Núñez-Carpintero et al. 2021) (Didier et al. 2018).
 }
 \value{
   \item{gene_community_matrix}{A matrix where the rows correspond to the unique nodes of all layers and the colums identify the resolution parameter used in each analysis. The values in the matrix describe the ID of the community where the node is found in each analysis. Each of the columns have its own way of naming the communities found, as a result of the difference in the number of communities found. Therefore, being at community "2" at resolution parameter 2.5 and being at community "2" at resolution parameter 5 does not mean that the node is kept within the same community during the analysis.}
   \item{l_constant}{A list of vectors with the nodes that are consistently found in the same community through all the analysis. In each vector of the list, you will have nodes that are always found in the same community in all  analyzed values of resolution parameter. The name of the vector describes the communities where the nodes are found. The order of the IDs is the same as in colnames(output$gene_community_matrix).}
-  \item{hamming_distance_matrix}{A matrix of dimensions N(nodes) x N(nodes). The hamming distance values between all nodes of the multiplex network. This hamming distance represent the number of analysis where the pair nodes ARE NOT FOUND within the same community.}
+  \item{distance_matrix}{A matrix of dimensions N(nodes) x N(nodes). The hamming distance values between all nodes of the multiplex network. This hamming distance represent the number of analysis where the pair nodes ARE NOT FOUND within the same community.}
 }
 \references{
+Núñez-Carpintero, I., Petrizzelli, M., Zinovyev, A., Cirillo, D. & Valencia, A. 2021. The multilayer community structure of medulloblastoma. iScience 24.
 Didier, G., Valdeolivas, A., Baudot, A., 2018. Identifying communities from multiplex biological networks by randomized optimization of modularity. F1000Res 7. https://doi.org/10.12688/f1000research.15486.2
 }
 \author{
