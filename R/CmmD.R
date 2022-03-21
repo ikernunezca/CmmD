@@ -92,7 +92,7 @@ CmmD <- function(nodelist= NULL,input_layers,resolution_start, resolution_end, i
     for(j in 1:tamano_alllists){
       searched <- unlist(lapply(alllists[[j]], function(x) gen %in% x))
       comunidad <- unname(which(searched == TRUE))
-      res_matrix[i,j] <- comunidad
+      res_matrix[i,j] <- as.numeric(comunidad)
     }
     res_matrix[i,"Pattern"] <- paste0(res_matrix[i,1:(ncol(res_matrix)-1)],collapse="_")
     percentage <- round((i/length(allgenes)),digits = 4)*100
@@ -110,7 +110,6 @@ CmmD <- function(nodelist= NULL,input_layers,resolution_start, resolution_end, i
   
   genes_same_communities <- split(rownames(res_matrix),res_matrix[,"Pattern"])
   final_res_matrix_length <- ncol(res_matrix) - 1
-                                parDist(x, method = "euclidean", diag = FALSE, upper = FALSE, threads = NULL, ...)
   distance_matrix <- parDist(res_matrix[,1:final_res_matrix_length],method= distmethod ,threads= threads,diag= T)
   final_output <- list(res_matrix[,1:final_res_matrix_length], genes_same_communities,distance_matrix)
   names(final_output) <- c("gene_community_matrix","l_constant","distance_matrix")
