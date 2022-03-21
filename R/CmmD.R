@@ -32,7 +32,7 @@ CmmD <- function(nodelist= NULL,input_layers,resolution_start, resolution_end, i
   message(paste0("Starting community analysis."))
   
   
-  start_time <- Sys.time()
+  #start_time <- Sys.time()
   for(i in 1:length(resolution_interval)){
     current_resolution <- resolution_interval[i]
     current_destfile <- desfile_vector[i]
@@ -114,8 +114,8 @@ CmmD <- function(nodelist= NULL,input_layers,resolution_start, resolution_end, i
   distance_matrix <- parDist(res_matrix[,1:final_res_matrix_length],method= distmethod ,threads= threads,diag= T)
   final_output <- list(res_matrix[,1:final_res_matrix_length], genes_same_communities,distance_matrix)
   names(final_output) <- c("gene_community_matrix","l_constant","distance_matrix")
-  end_time <- Sys.time()
-  diff_time <- end_time - start_time
-  message(paste0("Run Time: ",diff_time))
+  #end_time <- Sys.time()
+  #diff_time <- end_time - start_time
+  #message(paste0("Run Time: ",diff_time))
   return(final_output)
 }
