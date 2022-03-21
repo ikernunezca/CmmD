@@ -2,7 +2,7 @@ Package: CmmD
 Type: Package
 Title: Interface for running CmmD analysis on network community
         structures.
-Version: 1.0.0
+Version: 2.0.0
 Author: Iker Nuñez-Carpintero <iker.nunez@bsc.es>
 Description: Pass network files to MolTi network community detection algorithm and runs the CmmD analysis for MolTi's output. It can perform the CmmD analysis with precomputed community structure files with MolTi's format.
 SystemRequirements: molti-console
