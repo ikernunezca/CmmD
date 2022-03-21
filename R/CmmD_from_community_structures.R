@@ -15,6 +15,12 @@ CmmD_from_community_structures <- function(nodelist= NULL, community_structures,
   if(class(interval)!= 'numeric'){
     stop("ERROR: Interval value must be a number")
   }
+  if(class(distmethod)!= 'character'){
+    stop("ERROR: distmethod expects a character string")
+  }
+  if(class(threads)!= 'numeric'){
+    stop("ERROR: Threads must be a number corresponding to the number of cores available to use")
+  }
   
   message(paste0("Resolution parameter starts at: ",resolution_start))
   message(paste0("Resolution parameter ends at: ",resolution_end))
