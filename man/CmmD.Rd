@@ -15,6 +15,8 @@ CmmD(nodelist= NULL,input_layers,resolution_start,resolution_end,interval,destfi
   \item{resolution_start}{Numeric, a real number determining the first gamma resolution parameter to use in the different MolTi's analysis}
   \item{resolution_end}{Numeric, a real number determining the last gamma resolution parameter to use in the different MolTi's analysis.}
   \item{interval}{Numeric, a real number determining the interval of the resolution parameter to use.}
+  \item{distmethod}{String, A distance method metric to use to compute the trajectories. Defaults to "hamming" for hamming distance, but accepts any other metric supplied by parallelDist package.}
+  \item{threads}{Numeric, the number of threads to use for the computation of the distance matrix.}
   \item{destfile_community_analysis}{String, the path to save Molti's output files.}
 }
 \details{
