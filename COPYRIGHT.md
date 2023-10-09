@@ -14,7 +14,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License (v3.0) (https://www.gnu.org/licenses/gpl-3.0.html) for more details.
 
-You should have received a copy of the GNU General Public License (v2.0)
+You should have received a copy of the GNU General Public License (v3.0)
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
